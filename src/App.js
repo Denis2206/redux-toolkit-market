@@ -5,6 +5,8 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom
 import HomePage from "./components/HomePage";
 import Navigation from "./components/Navigation";
 import AdminPage from "./components/AdminPage";
+import CatalogPage from "./components/CatalogPage";
+import ShoppingBasket from "./components/ShoppingBasket";
 
 function App() {
     // return (
@@ -31,6 +33,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/admin" element={<AdminPage />} />
+                <Route path="/catalog" element={<CatalogPage />}/>
+                <Route path="/catalog/shoppingbasket" element={<ShoppingBasket />}>
+                        <Route path=":id" element={<ShoppingBasket />} />
+                </Route>
             </Routes>
         </Router>
     );

@@ -1,0 +1,87 @@
+#product {
+    width: 300px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid grey;
+    /* border-style: solid; */
+    border-radius: 5%;
+    margin: 1%;
+    padding-top: 1%;
+    /* flex-wrap: wrap; */
+}
+
+/* #product-list::before, #product-list::after {
+    content: "";
+    width: 100%;
+    order: 1;
+}
+
+#product:nth-child(3n) {
+    background: silver;
+}
+
+#product:nth-child(n + 4) {
+    order: 1;
+}
+#product:nth-child(n + 8) {
+    order: 2;
+} */
+
+/* .App {
+    font-family: sans-serif;
+    text-align: center;
+} */
+
+/* .product {
+    width: 100%;
+} */
+/* #catalog-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+} */
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    margin-left: 3%;
+    margin-right: 3%;
+    /* flex-flow: row wrap; */
+    /* align-content: space-between; */
+    /* justify-content: space-between; */
+}
+
+#product-img {
+    /* width: 50%; */
+    height: 220px;
+}
+
+#product-name {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* #scans {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#scan-img {
+    width: 40%;
+    height: 40%;
+}
+
+#bio {
+    font-size: 14px;
+} */

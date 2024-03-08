@@ -46,11 +46,11 @@ const AdminPage = () => {
         // console.log("после всего " + formData.image);
     }
 
-    // изменение товара
-    const handleSaveEdit = () => {
-        dispatch(updateProduct({editingProductId, formData}));
-        resetFormData();
-    };
+    // // изменение товара
+    // const handleSaveEdit = () => {
+    //     dispatch(updateProduct({editingProductId, formData}));
+    //     resetFormData();
+    // };
 
     // удаление товара
     const handleDeleteProduct = (productId) => {
@@ -82,7 +82,8 @@ const AdminPage = () => {
                             Добавление товара
                         </button>
                     </h2>
-                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    {/* className="accordion-collapse collapse show" show -- сразу раскрытый */}
+                    <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
                             <form >
                                 <div className="form-group my-3">
@@ -279,9 +280,8 @@ const AdminPage = () => {
                                         <button
                                             type="button"
                                             className="btn btn-outline-warning me-4"
-                                            onClick={() =>
-                                                handleEditProduct(product)
-                                            }
+                                            // onClick={() => handleEditProduct(product)}
+                                            onMouseEnter={() => handleEditProduct(product)}
                                             data-bs-toggle="modal"
                                             data-bs-target="#exampleModal"
                                         >
@@ -289,9 +289,7 @@ const AdminPage = () => {
                                         </button>
                                         <button
                                             className="btn btn-outline-danger"
-                                            onClick={() =>
-                                                handleDeleteProduct(product._id)
-                                            }
+                                            onClick={() => handleDeleteProduct(product._id)}
                                         >
                                             Удалить
                                         </button>
@@ -299,13 +297,16 @@ const AdminPage = () => {
                                 </tr>
                                 {editingProductId === product._id && (
                                     <tr>
-                                        <td colSpan="6">
+                                        {/* <td colSpan="6"> */}
+                                        {/* <button type="button"
+                                            className="btn btn-outline-success me-4" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">Открыть окно для изменения</button> */}
                                             <EditPopup
                                                 product={product}
-                                                onSave={handleSaveEdit}
+                                                // onSave={handleSaveEdit}
                                                 onClose={handleCancelEdit}
                                             />
-                                        </td>
+                                        {/* </td> */}
                                     </tr>
                                 )}
                             </React.Fragment>
